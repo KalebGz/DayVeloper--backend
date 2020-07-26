@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 2020_07_25_170421) do
 
   create_table "words", force: :cascade do |t|
     t.string "term"
-    t.text "defintion"
+    t.text "definition"
     t.integer "user_id"
     t.integer "word_category_id"
     t.datetime "created_at", precision: 6, null: false

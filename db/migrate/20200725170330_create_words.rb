@@ -2,7 +2,7 @@ class CreateWords < ActiveRecord::Migration[6.0]
   def change
     create_table :words do |t|
       t.string :term
-      t.text :defintion
+      t.text :definition
       t.integer :user_id
       t.integer :word_category_id
       # t.belongs_to :user, null: false, foreign_key: true

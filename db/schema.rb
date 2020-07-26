@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 2020_07_25_170421) do
 
   create_table "events", force: :cascade do |t|
     t.string "title"
-    t.datetime "date"
     t.datetime "notif_time"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false

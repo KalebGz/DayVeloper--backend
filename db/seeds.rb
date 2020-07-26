@@ -9,7 +9,7 @@ User.destroy_all
 Task.destroy_all
 Subtask.destroy_all
 Word.destroy_all
-Category.destroy_all
+# Category.destroy_all
 WordCategory.destroy_all
 TaskCategory.destroy_all
 Event.destroy_all
@@ -42,12 +42,25 @@ word_3 = Word.create(term: "API (Application Programming interface)", defintion:
 word_4 = Word.create(term: "Heuristic", defintion: "a technique designed for solving a problem more quickly")
 
 # Categories for words
-cat_w_1 = Category.create(name: "Computer Science")
-cat_2_2 = Category.create(name: "General")
+cat_w_1 = WordCategory.create(name: "General")
+cat_w_2 = WordCategory.create(name: "Computer Science")
+cat_w_1.words.push(word_1)
+cat_w_1.words.push(word_2)
+
+cat_w_2.words.push(word_3)
+cat_w_2.words.push(word_4)
 
 # Categories for Tasks
-cat_t_1 = Category.create(name: "Homework")
-cat_t_2 = Category.create(name: "Chores")
+cat_t_1 = TaskCategory.create(name: "Homework")
+cat_t_2 = TaskCategory.create(name: "Chores")
+cat_t_1.tasks.push(task_2)
+cat_t_1.tasks.push(task_4)
+
+cat_t_2.tasks.push(task_1)
+cat_t_2.tasks.push(task_3)
 
 
-wc_1 = WordCategory.create(category: cat_w_1, word)
+d_1 = DateTime.parse('28th July 2020 04:05:06+03:30')
+# d_2 = DateTime.parse('27th July 2020 04:05:06+03:30')
+# d.strftime('%I:%M:%S %p')# => "03:35:06 PM"
+e_1 = Event.new(title: "Club Zoom Meeting!", notif_time: d_1, user: usr_0)

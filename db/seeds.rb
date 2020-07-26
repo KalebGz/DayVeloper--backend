@@ -23,41 +23,41 @@ usr_1 = User.create(username:"Jack", password:"123", profile_pic:prof_pic_1, loc
 usr_2 = User.create(username:"Brandon", password:"123", profile_pic:prof_pic_2, location:"Alabama")
 usr_3 = User.create(username:"Kaleb", password:"123", profile_pic:prof_pic_3, location:"Washington,DC")
 
-task_1 = Task.create(title:"Clean shoes", description: "Remove smudge off of the tip of red sneakers")
-task_2 = Task.create(title: "English HW", description: "Read pages 100-120 of Otello")
-task_3 = Task.create(title:"Clean shoes", description: "Remove smudge off of the tip of red sneakers")
-task_4 = Task.create(title:"Spanish HW", description: "Practice presentation")
-task_5 = Task.create(title: "CS final Project")
+# Categories for Tasks
+cat_t_1 = TaskCategory.create(name: "Homework")
+cat_t_2 = TaskCategory.create(name: "Chores")
+
+task_1 = Task.create(title:"Clean shoes", description: "Remove smudge off of the tip of red sneakers", task_category: cat_t_2)
+task_2 = Task.create(title: "English HW", description: "Read pages 100-120 of Otello", task_category: cat_t_1)
+task_3 = Task.create(title:"Clean shoes", description: "Remove smudge off of the tip of red sneakers", task_category: cat_t_2)
+task_4 = Task.create(title:"Spanish HW", description: "Practice presentation", task_category: cat_t_1)
+task_5 = Task.create(title: "CS final Project", task_category: cat_t_1)
+
+# cat_t_1.tasks.push(task_2)
+# cat_t_1.tasks.push(task_4)
+# cat_t_2.tasks.push(task_1)
+# cat_t_2.tasks.push(task_3)
 
 sub_t_1 = SubTask.create(title: "build out models", task: task_5)
 sub_t_2 = SubTask.create(title: "create migrations", task: task_5)
 sub_t_3 = SubTask.create(title: "create Seed file and test program", task: task_5)
 sub_t_4 = SubTask.create(title: "render json object from browser", task: task_5)
 
-# Look for external api to genreate random words
-# https://www.vocabulary.com/lists/176046
-word_1 = Word.create(term: "aberration", defintion: "a state or condition markedly different from the norm")
-word_2 = Word.create(term: "embezzle", defintion: "appropriate fraudulently to one's own use")
-word_3 = Word.create(term: "API (Application Programming interface)", defintion: "Way in which organizations allow the public to request their data/functionality to the public")
-word_4 = Word.create(term: "Heuristic", defintion: "a technique designed for solving a problem more quickly")
 
 # Categories for words
 cat_w_1 = WordCategory.create(name: "General")
 cat_w_2 = WordCategory.create(name: "Computer Science")
-cat_w_1.words.push(word_1)
-cat_w_1.words.push(word_2)
+word_1 = Word.create(term: "aberration", defintion: "a state or condition markedly different from the norm", word_category: cat_w_1)
+word_2 = Word.create(term: "embezzle", defintion: "appropriate fraudulently to one's own use", word_category: cat_w_1)
+word_3 = Word.create(term: "API (Application Programming interface)", defintion: "Way in which organizations allow the public to request their data/functionality to the public", word_category: cat_w_2)
+word_4 = Word.create(term: "Heuristic", defintion: "a technique designed for solving a problem more quickly", word_category: cat_w_2)
 
-cat_w_2.words.push(word_3)
-cat_w_2.words.push(word_4)
+# cat_w_1.words.push(word_1)
+# cat_w_1.words.push(word_2)
+# cat_w_2.words.push(word_3)
+# cat_w_2.words.push(word_4)
 
-# Categories for Tasks
-cat_t_1 = TaskCategory.create(name: "Homework")
-cat_t_2 = TaskCategory.create(name: "Chores")
-cat_t_1.tasks.push(task_2)
-cat_t_1.tasks.push(task_4)
 
-cat_t_2.tasks.push(task_1)
-cat_t_2.tasks.push(task_3)
 
 
 d_1 = DateTime.parse('28th July 2020 04:05:06+03:30')

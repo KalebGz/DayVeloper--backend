@@ -37,10 +37,8 @@ ActiveRecord::Schema.define(version: 2020_07_25_170421) do
   end
 
   create_table "tasks", force: :cascade do |t|
-    t.string "username"
-    t.string "password"
-    t.string "profile_pic"
-    t.string "location"
+    t.string "title"
+    t.string "description"
     t.integer "task_category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

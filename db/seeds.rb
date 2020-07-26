@@ -61,7 +61,7 @@ word_4 = Word.create(term: "Heuristic", definition: "a technique designed for so
 d_1 = DateTime.parse('28th July 2020 04:05:06+03:30')
 # d_2 = DateTime.parse('27th July 2020 04:05:06+03:30')
 # d.strftime('%I:%M:%S %p')# => "03:35:06 PM"
-e_1 = Event.new(title: "Club Zoom Meeting!", notif_time: d_1, user: usr_0)
+e_1 = Event.create(title: "Club Zoom Meeting!", notif_time: d_1, user: usr_0)
 
 # binding.pry
 # 0

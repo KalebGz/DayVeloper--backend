@@ -38,10 +38,10 @@ task_5 = Task.create(title: "CS final Project", task_category: cat_t_1)
 # cat_t_2.tasks.push(task_1)
 # cat_t_2.tasks.push(task_3)
 
-sub_t_1 = SubTask.create(title: "build out models", task: task_5)
-sub_t_2 = SubTask.create(title: "create migrations", task: task_5)
-sub_t_3 = SubTask.create(title: "create Seed file and test program", task: task_5)
-sub_t_4 = SubTask.create(title: "render json object from browser", task: task_5)
+sub_t_1 = Subtask.create(title: "build out models", task: task_5)
+sub_t_2 = Subtask.create(title: "create migrations", task: task_5)
+sub_t_3 = Subtask.create(title: "create Seed file and test program", task: task_5)
+sub_t_4 = Subtask.create(title: "render json object from browser", task: task_5)
 
 
 # Categories for words

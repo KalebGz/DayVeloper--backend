@@ -1,7 +1,3 @@
-
-# # require_all 'app/models'
-# require 'pry'
-
 User.destroy_all
 Task.destroy_all
 Subtask.destroy_all
@@ -9,6 +5,11 @@ Word.destroy_all
 WordCategory.destroy_all
 TaskCategory.destroy_all
 Event.destroy_all
+
+# reset ids of all models
+ActiveRecord::Base.connection.tables.each do |t|
+    ActiveRecord::Base.connection.reset_pk_sequence!(t)
+end
 
 prof_pic_1 = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.artstation.com%2Fartwork%2FRY604y&psig=AOvVaw1aStwDBe4W0Bf5ZWnV_UGC&ust=1595800999223000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLCSkpK06eoCFQAAAAAdAAAAABAD"
 prof_pic_2 = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.artstation.com%2Fmarketplace%2Fp%2FP7wD%2F4-character-logo-s-profile-pictures&psig=AOvVaw1aStwDBe4W0Bf5ZWnV_UGC&ust=1595800999223000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLCSkpK06eoCFQAAAAAdAAAAABAJ"

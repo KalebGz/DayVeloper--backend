@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 2020_07_25_170421) do
     t.string "title"
     t.string "description"
     t.integer "task_category_id"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

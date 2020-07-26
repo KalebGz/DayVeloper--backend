@@ -24,11 +24,11 @@ usr_3 = User.create(username:"Kaleb", password:"123", profile_pic:prof_pic_3, lo
 cat_t_1 = TaskCategory.create(name: "Homework")
 cat_t_2 = TaskCategory.create(name: "Chores")
 
-task_1 = Task.create(title:"Clean shoes", description: "Remove smudge off of the tip of red sneakers", task_category: cat_t_2)
-task_2 = Task.create(title: "English HW", description: "Read pages 100-120 of Otello", task_category: cat_t_1)
-task_3 = Task.create(title:"Clean shoes", description: "Remove smudge off of the tip of red sneakers", task_category: cat_t_2)
-task_4 = Task.create(title:"Spanish HW", description: "Practice presentation", task_category: cat_t_1)
-task_5 = Task.create(title: "CS final Project", task_category: cat_t_1)
+task_1 = Task.create(title:"Clean shoes", description: "Remove smudge off of the tip of red sneakers", task_category: cat_t_2, user: usr_0)
+task_2 = Task.create(title: "English HW", description: "Read pages 100-120 of Otello", task_category: cat_t_1, user: usr_0)
+task_3 = Task.create(title:"Clean shoes", description: "Remove smudge off of the tip of red sneakers", task_category: cat_t_2, user: usr_0)
+task_4 = Task.create(title:"Spanish HW", description: "Practice presentation", task_category: cat_t_1, user: usr_0)
+task_5 = Task.create(title: "CS final Project", task_category: cat_t_1, user: usr_0)
 
 # cat_t_1.tasks.push(task_2)
 # cat_t_1.tasks.push(task_4)

@@ -6,7 +6,10 @@ ruby '2.6.1'
 # Proj Gems
 gem 'active_model_serializers'
 gem 'activerecord-reset-pk-sequence'
+gem 'require_all'
 # gem 'jwt'
+
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'

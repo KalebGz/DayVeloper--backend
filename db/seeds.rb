@@ -1,15 +1,11 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+
+# # require_all 'app/models'
+# require 'pry'
+
 User.destroy_all
 Task.destroy_all
 Subtask.destroy_all
 Word.destroy_all
-# Category.destroy_all
 WordCategory.destroy_all
 TaskCategory.destroy_all
 Event.destroy_all
@@ -47,10 +43,11 @@ sub_t_4 = Subtask.create(title: "render json object from browser", task: task_5)
 # Categories for words
 cat_w_1 = WordCategory.create(name: "General")
 cat_w_2 = WordCategory.create(name: "Computer Science")
-word_1 = Word.create(term: "aberration", defintion: "a state or condition markedly different from the norm", word_category: cat_w_1)
-word_2 = Word.create(term: "embezzle", defintion: "appropriate fraudulently to one's own use", word_category: cat_w_1)
-word_3 = Word.create(term: "API (Application Programming interface)", defintion: "Way in which organizations allow the public to request their data/functionality to the public", word_category: cat_w_2)
-word_4 = Word.create(term: "Heuristic", defintion: "a technique designed for solving a problem more quickly", word_category: cat_w_2)
+
+word_1 = Word.create(term: "aberration", defintion: "a state or condition markedly different from the norm", word_category: cat_w_1, user: usr_0)
+word_2 = Word.create(term: "embezzle", defintion: "appropriate fraudulently to one's own use", word_category: cat_w_1, user: usr_0)
+word_3 = Word.create(term: "API (Application Programming interface)", defintion: "Way in which organizations allow the public to request their data/functionality to the public", word_category: cat_w_2, user: usr_0)
+word_4 = Word.create(term: "Heuristic", defintion: "a technique designed for solving a problem more quickly", word_category: cat_w_2, user: usr_0)
 
 # cat_w_1.words.push(word_1)
 # cat_w_1.words.push(word_2)
@@ -64,3 +61,6 @@ d_1 = DateTime.parse('28th July 2020 04:05:06+03:30')
 # d_2 = DateTime.parse('27th July 2020 04:05:06+03:30')
 # d.strftime('%I:%M:%S %p')# => "03:35:06 PM"
 e_1 = Event.new(title: "Club Zoom Meeting!", notif_time: d_1, user: usr_0)
+
+# binding.pry
+# 0

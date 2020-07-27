@@ -19,6 +19,6 @@ class Api::V1::WordsController < ApplicationController
 
     private
     def word_params
-        params.require(:word).permit(:term, :defintion, :studied, :user_id, :word_category_id)
+        params.require(:word).permit(:term, :definition, :studied, :user_id, :word_category_id)
     end
 end

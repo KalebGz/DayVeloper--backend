@@ -11,9 +11,7 @@ class Api::V1::EventsController < ApplicationController
 
     def create
         # byebug
-        event = Event.new(event_params)
-        event.notif_time = event.notif_time.to_datetime
-        event.save
+        event = Event.create(event_params)
         # byebug
         render json: event
 

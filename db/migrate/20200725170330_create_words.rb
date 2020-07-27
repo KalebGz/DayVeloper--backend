@@ -5,8 +5,7 @@ class CreateWords < ActiveRecord::Migration[6.0]
       t.text :definition
       t.integer :user_id
       t.integer :word_category_id
-      # t.belongs_to :user, null: false, foreign_key: true
-      # t.belongs_to :word_category, null: false, foreign_key: true
+      t.boolean :studied, default: false
 
 
       t.timestamps

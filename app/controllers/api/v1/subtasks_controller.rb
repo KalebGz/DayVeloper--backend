@@ -7,13 +7,13 @@ class Api::V1::SubtasksController < ApplicationController
     end
 
     def update
-        subtask = Subtask.find[params[:id]]
+        subtask = Subtask.find(params[:id])
         subtask.update(subtask_params)
         render json: subtask
     end
 
     def destroy
-        subtask = Subtask.find[params[:id]]
+        subtask = Subtask.find(params[:id])
         subtask.destroy
         render json: "subtask was successfully destroyed"
     end

@@ -16,14 +16,13 @@ class Api::V1::EventsController < ApplicationController
     end
 
     def update
-        # byebug
-        event = Event.find[params[:id]]
+        event = Event.find(params[:id])
         event.update(event_params)
         render json: event
     end
 
     def destroy
-        event = Event.find[params[:id]]
+        event = Event.find(params[:id])
         event.destroy
         render json: "Event was successfully destroyed"
     end

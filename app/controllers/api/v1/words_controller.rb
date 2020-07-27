@@ -6,13 +6,13 @@ class Api::V1::WordsController < ApplicationController
     end
 
     def update
-        word = Word.find[params[:id]]
+        word = Word.find(params[:id])
         word.update(word_params)
         render json: word
     end
 
     def destroy
-        word = Word.find[params[:id]]
+        word = Word.find(params[:id])
         word.destroy
         render json: "word was successfully destroyed"
     end

@@ -11,13 +11,13 @@ class Api::V1::TasksController < ApplicationController
     end
 
     def update
-        task = Task.find[params[:id]]
+        task = Task.find(params[:id])
         task.update(task_params)
         render json: task
     end
 
     def destroy
-        task = Task.find[params[:id]]
+        task = Task.find(params[:id])
         task.destroy
         render json: "task was successfully destroyed"
     end

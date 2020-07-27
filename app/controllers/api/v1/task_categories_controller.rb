@@ -2,7 +2,7 @@ class Api::V1::TaskCategoriesController < ApplicationController
     
     def show
         task_category = TaskCategory.find(params[:id])
-        render json: taskCategory
+        render json: task_category
     end
 
     def index

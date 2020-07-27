@@ -5,7 +5,7 @@ Rails.application.routes.draw do
       resources :tasks, only: [:show, :create, :update, :destroy]
       resources :task_categories, only: [:index, :show, :create, :update, :destroy]
       resources :subtasks, only: [:index, :show, :create, :update, :destroy]
-      resources :words, only: [:update, :destroy]
+      resources :words, only: [:create, :update, :destroy]
       resources :word_categories, only: [:index, :show, :create, :update, :destroy]
       resources :events, only: [:index, :create, :update, :destroy]
     end

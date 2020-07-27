@@ -5,6 +5,7 @@ class CreateTasks < ActiveRecord::Migration[6.0]
       t.string :description
       t.integer :task_category_id
       t.integer :user_id
+      t.boolean :completed, default: false
       
       t.timestamps
     end

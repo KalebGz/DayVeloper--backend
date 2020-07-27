@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2020_07_25_170421) do
   create_table "subtasks", force: :cascade do |t|
     t.string "title"
     t.integer "task_id"
+    t.boolean "completed", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -41,6 +42,7 @@ ActiveRecord::Schema.define(version: 2020_07_25_170421) do
     t.string "description"
     t.integer "task_category_id"
     t.integer "user_id"
+    t.boolean "completed", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -65,6 +67,7 @@ ActiveRecord::Schema.define(version: 2020_07_25_170421) do
     t.text "definition"
     t.integer "user_id"
     t.integer "word_category_id"
+    t.boolean "studied", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

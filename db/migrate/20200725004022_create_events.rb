@@ -4,8 +4,6 @@ class CreateEvents < ActiveRecord::Migration[6.0]
       t.string :title
       t.datetime :notif_time
       t.integer :user_id
-
-      t.timestamps
     end
   end
 end

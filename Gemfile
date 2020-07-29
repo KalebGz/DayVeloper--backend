@@ -6,6 +6,7 @@ ruby '2.6.1'
 # Proj Gems
 gem 'active_model_serializers'
 gem 'activerecord-reset-pk-sequence'
+gem 'awesome_print', :require => 'ap'
 gem 'require_all'
 # gem 'jwt'
 

@@ -19,22 +19,16 @@ ActiveRecord::Schema.define(version: 2020_07_25_170421) do
     t.string "title"
     t.datetime "notif_time"
     t.integer "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "subtasks", force: :cascade do |t|
     t.string "title"
     t.integer "task_id"
     t.boolean "completed", default: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "task_categories", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "tasks", force: :cascade do |t|
@@ -43,8 +37,6 @@ ActiveRecord::Schema.define(version: 2020_07_25_170421) do
     t.integer "task_category_id"
     t.integer "user_id"
     t.boolean "completed", default: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -52,14 +44,10 @@ ActiveRecord::Schema.define(version: 2020_07_25_170421) do
     t.string "password"
     t.text "profile_pic"
     t.string "location"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "word_categories", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "words", force: :cascade do |t|
@@ -68,8 +56,6 @@ ActiveRecord::Schema.define(version: 2020_07_25_170421) do
     t.integer "user_id"
     t.integer "word_category_id"
     t.boolean "studied", default: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
 end

@@ -15,10 +15,11 @@ prof_pic_1 = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.artstation.c
 prof_pic_2 = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.artstation.com%2Fmarketplace%2Fp%2FP7wD%2F4-character-logo-s-profile-pictures&psig=AOvVaw1aStwDBe4W0Bf5ZWnV_UGC&ust=1595800999223000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLCSkpK06eoCFQAAAAAdAAAAABAJ"
 prof_pic_3 = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.iconfinder.com%2Ficons%2F3203259%2Favatar_of_a_man_man_with_glasses_profile_of_man_simple_man_stylish_man_icon&psig=AOvVaw1aStwDBe4W0Bf5ZWnV_UGC&ust=1595800999223000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLCSkpK06eoCFQAAAAAdAAAAABAO"
 
-usr_0 = User.create(username:"1", password:"1", profile_pic:"google.com", location:"USA")
-usr_1 = User.create(username:"Jack", password:"123", profile_pic:prof_pic_1, location:"Hawaii")
-usr_2 = User.create(username:"Brandon", password:"123", profile_pic:prof_pic_2, location:"Alabama")
-usr_3 = User.create(username:"Kaleb", password:"123", profile_pic:prof_pic_3, location:"Washington,DC")
+user_0_prof_pic = 'https://avatars3.githubusercontent.com/u/25066309?s=460&u=5b39a7407598a2fa7d06a2475cbea0fa53bed6d1&v=4'
+usr_0 = User.create(username:"KalebGz", password:"1", profile_pic:user_0_prof_pic, location:"20015")
+usr_1 = User.create(username:"Jack", password:"123", profile_pic:prof_pic_1, location:"1234")
+usr_2 = User.create(username:"Brandon", password:"123", profile_pic:prof_pic_2, location:"12344")
+usr_3 = User.create(username:"Kaleb", password:"123", profile_pic:prof_pic_3, location:"2234")
 
 # Categories for Tasks
 cat_t_1 = TaskCategory.create(name: "Homework")
@@ -55,10 +56,7 @@ word_4 = Word.create(term: "Heuristic", definition: "a technique designed for so
 # cat_w_2.words.push(word_3)
 # cat_w_2.words.push(word_4)
 
-
-
-
-d_1 = "Wed Jul 29 2020 03:03:31 GMT-0400 (EDT)"
+d_1 = "Wed Jul 29 2020 03:03"
 e_1 = Event.create(title: "Club Zoom Meeting!", notif_time: d_1, user: usr_0)
 
 # binding.pry

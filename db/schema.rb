@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 2020_07_25_170421) do
     t.string "username"
     t.string "password"
     t.text "profile_pic"
-    t.string "location"
+    t.integer "location"
   end
 
   create_table "word_categories", force: :cascade do |t|

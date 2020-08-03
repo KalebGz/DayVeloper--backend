@@ -24,12 +24,14 @@ usr_3 = User.create(username:"Kaleb", password:"123", profile_pic:prof_pic_3, lo
 # Categories for Tasks
 cat_t_1 = TaskCategory.create(name: "Homework")
 cat_t_2 = TaskCategory.create(name: "Chores")
+cat_t_3 = TaskCategory.create(name: "Project")
+cat_t_4 = TaskCategory.create(name: "General")
 
 task_1 = Task.create(title:"Clean shoes", description: "Remove smudge off of the tip of red sneakers", task_category: cat_t_2, user: usr_0)
 task_2 = Task.create(title: "English HW", description: "Read pages 100-120 of Otello", task_category: cat_t_1, user: usr_0)
-task_3 = Task.create(title:"Clean shoes", description: "Remove smudge off of the tip of red sneakers", task_category: cat_t_2, user: usr_0)
+task_3 = Task.create(title:"Get Groceries", description: "Milk, cereal, Bread, Pasta, Rice", task_category: cat_t_2, user: usr_0)
 task_4 = Task.create(title:"Spanish HW", description: "Practice presentation", task_category: cat_t_1, user: usr_0)
-task_5 = Task.create(title: "CS final Project", task_category: cat_t_1, user: usr_0)
+task_5 = Task.create(title: "CS final Project", task_category: cat_t_3, user: usr_0)
 
 # cat_t_1.tasks.push(task_2)
 # cat_t_1.tasks.push(task_4)
@@ -45,6 +47,8 @@ sub_t_4 = Subtask.create(title: "render json object from browser", task: task_5)
 # Categories for words
 cat_w_1 = WordCategory.create(name: "General")
 cat_w_2 = WordCategory.create(name: "Computer Science")
+cat_w_3 = WordCategory.create(name: "Politics")
+cat_w_4 = WordCategory.create(name: "Exercises")
 
 word_1 = Word.create(term: "aberration", definition: "a state or condition markedly different from the norm", word_category: cat_w_1, user: usr_0)
 word_2 = Word.create(term: "embezzle", definition: "appropriate fraudulently to one's own use", word_category: cat_w_1, user: usr_0)

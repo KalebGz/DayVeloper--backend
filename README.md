@@ -1,24 +1,5 @@
-# README
+# DayVeloper
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+DayVeloper is a web app that will help anyone create, categorize and manage their To-do lists. It also has some other widget like features to help the user carry out some of the more routine tasks in their day to day life.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![Front Page](https://github.com/KalebGz/DayVeloper--backend/blob/master/front_page.png?raw=true)
